@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="kobeon.stream.Stream" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Stream</name>
+    <description>A widget to stream data from a Azure Open AI</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+            <property key="openaiURL" type="expression" required="true">
+                <caption>URL</caption>
+                <description>The URL to integrate with</description>
+                    <returnType type="String" />
+            </property>
+            <property key="inputMessage" type="attribute">
+                <caption>Input message</caption>
+                <description>The attribute with the data to send</description>
+                <attributeTypes>
+                    <attributeType name="String"/>
+                </attributeTypes>
+            </property>
+            <property key="responseMessage" type="attribute" >
+                <caption>Reponse message</caption>
+                <description>The attribute to store the response</description>
+                <attributeTypes>
+                    <attributeType name="String"/>
+                 </attributeTypes>
+            </property>
+            <property key="onFinishAction" type="action">
+                <caption>On Finish</caption>
+                <description>Action to be performed when the response is finished</description>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>
